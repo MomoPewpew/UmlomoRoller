@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.28803.352
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UmlomoRoller", "UmlomoRoller\UmlomoRoller.csproj", "{170C4789-4138-4825-BF17-2D22329CBD24}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UmlomoRoller", "UmlomoRoller\UmlomoRoller.csproj", "{0E2ABCBF-5FE1-477E-BB9B-B0E2E488F263}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{170C4789-4138-4825-BF17-2D22329CBD24}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{170C4789-4138-4825-BF17-2D22329CBD24}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{170C4789-4138-4825-BF17-2D22329CBD24}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{170C4789-4138-4825-BF17-2D22329CBD24}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0E2ABCBF-5FE1-477E-BB9B-B0E2E488F263}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E2ABCBF-5FE1-477E-BB9B-B0E2E488F263}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E2ABCBF-5FE1-477E-BB9B-B0E2E488F263}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E2ABCBF-5FE1-477E-BB9B-B0E2E488F263}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {E4C20735-B195-4466-BA67-933B8C23CAFE}
+		SolutionGuid = {9C670F0D-E9F6-47F8-A2BC-3783AD8B7D37}
 	EndGlobalSection
 EndGlobal
