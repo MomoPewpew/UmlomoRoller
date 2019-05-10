@@ -11,12 +11,15 @@ namespace UmlomoRoller
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            for (int i = 0; i < 150; i++)
+            {
+                TextOutput.Text += Environment.NewLine+ " ";
+            }
         }
 
-        protected void TextBox1_TextChanged(object sender, EventArgs e)
+        protected void TextOutput_TextChanged(object sender, EventArgs e)
         {
-
+            
         }
 
         protected void CheckBox1_CheckedChanged(object sender, EventArgs e)
@@ -25,6 +28,11 @@ namespace UmlomoRoller
         }
 
         protected void Button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void TextModifier_TextChanged(object sender, EventArgs e)
         {
 
         }
