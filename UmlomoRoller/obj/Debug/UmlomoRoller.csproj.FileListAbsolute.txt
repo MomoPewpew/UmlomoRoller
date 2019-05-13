@@ -1,4 +1,3 @@
-E:\Users\Marijn\Documents\GitHub\UmlomoRoller\UmlomoRoller\bin\UmlomoRoller.dll.config
 E:\Users\Marijn\Documents\GitHub\UmlomoRoller\UmlomoRoller\bin\UmlomoRoller.dll
 E:\Users\Marijn\Documents\GitHub\UmlomoRoller\UmlomoRoller\bin\UmlomoRoller.pdb
 E:\Users\Marijn\Documents\GitHub\UmlomoRoller\UmlomoRoller\bin\roslyn\csc.exe
@@ -54,3 +53,8 @@ E:\Users\Marijn\Documents\GitHub\UmlomoRoller\UmlomoRoller\obj\Debug\UmlomoRolle
 E:\Users\Marijn\Documents\GitHub\UmlomoRoller\UmlomoRoller\obj\Debug\UmlomoRoller.csproj.CopyComplete
 E:\Users\Marijn\Documents\GitHub\UmlomoRoller\UmlomoRoller\obj\Debug\UmlomoRoller.dll
 E:\Users\Marijn\Documents\GitHub\UmlomoRoller\UmlomoRoller\obj\Debug\UmlomoRoller.pdb
+E:\Users\Marijn\Documents\GitHub\UmlomoRoller\UmlomoRoller\bin\Settings.txt
+E:\Users\Marijn\Documents\GitHub\UmlomoRoller\UmlomoRoller\bin\Web.config
+E:\Users\Marijn\Documents\GitHub\UmlomoRoller\UmlomoRoller\bin\Web.Debug.config
+E:\Users\Marijn\Documents\GitHub\UmlomoRoller\UmlomoRoller\bin\Web.Release.config
+E:\Users\Marijn\Documents\GitHub\UmlomoRoller\UmlomoRoller\bin\UmlomoRoller.dll.config

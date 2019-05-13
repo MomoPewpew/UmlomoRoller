@@ -13,22 +13,13 @@ namespace UmlomoRoller {
     public partial class FormMain {
         
         /// <summary>
-        /// form1 control.
+        /// labelStateMain control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
-        
-        /// <summary>
-        /// Label1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label1;
+        protected global::System.Web.UI.WebControls.Label labelStateMain;
         
         /// <summary>
         /// Button1 control.
@@ -67,13 +58,13 @@ namespace UmlomoRoller {
         protected global::System.Web.UI.WebControls.TextBox TextOutput;
         
         /// <summary>
-        /// Label2 control.
+        /// labelBuffsMain control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label2;
+        protected global::System.Web.UI.WebControls.Label labelBuffsMain;
         
         /// <summary>
         /// Button5 control.
@@ -157,31 +148,40 @@ namespace UmlomoRoller {
         protected global::System.Web.UI.WebControls.Button Button13;
         
         /// <summary>
-        /// Label3 control.
+        /// Button15 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label3;
+        protected global::System.Web.UI.WebControls.Button Button15;
         
         /// <summary>
-        /// TextModifier control.
+        /// labelModifierMain control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextModifier;
+        protected global::System.Web.UI.WebControls.Label labelModifierMain;
         
         /// <summary>
-        /// Button14 control.
+        /// textModifier control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button14;
+        protected global::System.Web.UI.WebControls.TextBox textModifier;
+        
+        /// <summary>
+        /// buttonSettings control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button buttonSettings;
         
         /// <summary>
         /// Button4 control.
