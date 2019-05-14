@@ -12,8 +12,13 @@
         .auto-style1 {
             width: 716px;
         }
+        #Button1 {
+            height: 49px;
+            width: 1010px;
+        }
     </style>
 </head>
+
 <body style="height: 1920px; width: 1080px">
     <form id="FormSettings" runat="server">
 
@@ -360,6 +365,60 @@
         <p style="height: 50px; margin-bottom: 10px; width: 1080px;">
             <asp:Label ID="label13" runat="server" Font-Size="X-Large" Height="50px" style="margin: 10px" Text="The above fields should include all things that are always on such as deadly aim and weapon focus." Width="1060px"></asp:Label>
         </p>
+
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <asp:Button ID="buttonConfirm" runat="server" Height="50px" OnClick="buttonConfirm_Click" style="margin: 10px" Text="Confirm" Width="1060px" />
         
     </form>
 </body>

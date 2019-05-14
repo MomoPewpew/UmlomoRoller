@@ -10,49 +10,154 @@ namespace UmlomoRoller
 {
     public partial class FormSettings : System.Web.UI.Page
     {
-        List<TextBox> listTextboxName = new List<TextBox>();
-        List<TextBox> listTextboxAttack = new List<TextBox>();
-        List<TextBox> listTextboxDamage = new List<TextBox>();
-        List<TextBox> listTextboxRolls = new List<TextBox>();
-        List<TextBox> listTextboxDice = new List<TextBox>();
-        List<TextBox> listTextboxType = new List<TextBox>();
+        static bool check;
+        static List<TextBox> listBaseAttack = new List<TextBox>();
+        static List<TextBox> listBaseRolls = new List<TextBox>();
+        static List<TextBox> listBaseDice = new List<TextBox>();
+        static List<TextBox> listBaseDamage = new List<TextBox>();
+        static List<TextBox> listSneakRolls = new List<TextBox>();
+        static List<TextBox> listSneakDice = new List<TextBox>();
+        static List<TextBox> listTextboxName = new List<TextBox>();
+        static List<TextBox> listTextboxAttack = new List<TextBox>();
+        static List<TextBox> listTextboxDamage = new List<TextBox>();
+        static List<TextBox> listTextboxRolls = new List<TextBox>();
+        static List<TextBox> listTextboxDice = new List<TextBox>();
+        static List<TextBox> listTextboxType = new List<TextBox>();
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            SettingsBaseAttack.Text = ConfigurationManager.AppSettings["BaseAttack"];
-            SettingsBaseRolls.Text = ConfigurationManager.AppSettings["BaseRolls"];
-            SettingsBaseDice.Text = ConfigurationManager.AppSettings["BaseDice"];
-            SettingsBaseDamage.Text = ConfigurationManager.AppSettings["BaseDamage"];
-            SettingsSneakRolls.Text = ConfigurationManager.AppSettings["SneakRolls"];
-            SettingsSneakDice.Text = ConfigurationManager.AppSettings["SneakDice"];
-
-            string[] Name = ConfigurationManager.AppSettings["Name"].Split(',');
-            string[] Attack = ConfigurationManager.AppSettings["Attack"].Split(',');
-            string[] Damage = ConfigurationManager.AppSettings["Damage"].Split(',');
-            string[] Rolls = ConfigurationManager.AppSettings["Rolls"].Split(',');
-            string[] Dice = ConfigurationManager.AppSettings["Dice"].Split(',');
-            string[] Type = ConfigurationManager.AppSettings["Type"].Split(',');
-
-            for (int i = 0; i < 13; i++)
+            //if (!IsPostBack)
             {
-                listTextboxName.Add(FindControl("SettingsName" + i) as TextBox);
-                listTextboxName[i].Text = Name[i];
+                listBaseAttack.Add(SettingsBaseAttack);
+                listBaseAttack[0].Text = ConfigurationManager.AppSettings["BaseAttack"];
+                listBaseRolls.Add(SettingsBaseRolls);
+                listBaseRolls[0].Text = ConfigurationManager.AppSettings["BaseRolls"];
+                listBaseDice.Add(SettingsBaseDice);
+                listBaseDice[0].Text = ConfigurationManager.AppSettings["BaseDice"];
+                listBaseDamage.Add(SettingsBaseDamage);
+                listBaseDamage[0].Text = ConfigurationManager.AppSettings["BaseDamage"];
+                listSneakRolls.Add(SettingsSneakRolls);
+                listSneakRolls[0].Text = ConfigurationManager.AppSettings["SneakRolls"];
+                listSneakDice.Add(SettingsSneakDice);
+                listSneakDice[0].Text = ConfigurationManager.AppSettings["SneakDice"];
 
-                listTextboxAttack.Add(FindControl("SettingsAttack" + i) as TextBox);
-                listTextboxAttack[i].Text = Attack[i];
+                string[] Name = ConfigurationManager.AppSettings["Name"].Split('·');
+                string[] Attack = ConfigurationManager.AppSettings["Attack"].Split('·');
+                string[] Damage = ConfigurationManager.AppSettings["Damage"].Split('·');
+                string[] Rolls = ConfigurationManager.AppSettings["Rolls"].Split('·');
+                string[] Dice = ConfigurationManager.AppSettings["Dice"].Split('·');
+                string[] Type = ConfigurationManager.AppSettings["Type"].Split('·');
 
-                listTextboxDamage.Add(FindControl("SettingsDamage" + i) as TextBox);
-                listTextboxDamage[i].Text = Damage[i];
+                for (int i = 0; i < 13; i++)
+                {
+                    listTextboxName.Add(FindControl("SettingsName" + i) as TextBox);
+                    listTextboxName[i].Text = Name[i];
 
-                listTextboxRolls.Add(FindControl("SettingsRolls" + i) as TextBox);
-                listTextboxRolls[i].Text = Rolls[i];
+                    listTextboxAttack.Add(FindControl("SettingsAttack" + i) as TextBox);
+                    listTextboxAttack[i].Text = Attack[i];
 
-                listTextboxDice.Add(FindControl("SettingsDice" + i) as TextBox);
-                listTextboxDice[i].Text = Dice[i];
+                    listTextboxDamage.Add(FindControl("SettingsDamage" + i) as TextBox);
+                    listTextboxDamage[i].Text = Damage[i];
 
-                listTextboxType.Add(FindControl("SettingsType" + i) as TextBox);
-                listTextboxType[i].Text = Type[i];
+                    listTextboxRolls.Add(FindControl("SettingsRolls" + i) as TextBox);
+                    listTextboxRolls[i].Text = Rolls[i];
+
+                    listTextboxDice.Add(FindControl("SettingsDice" + i) as TextBox);
+                    listTextboxDice[i].Text = Dice[i];
+
+                    listTextboxType.Add(FindControl("SettingsType" + i) as TextBox);
+                    listTextboxType[i].Text = Type[i];
+                }
+            }            
+        }
+
+        protected void buttonConfirm_Click(object sender, EventArgs e)
+        {
+            string Name = "";
+            string Attack = "";
+            string Damage = "";
+            string Rolls = "";
+            string Dice = "";
+            string Type = "";
+            string BaseAttack = "";
+            string BaseRolls = "";
+            string BaseDice = "";
+            string BaseDamage = "";
+            string SneakRolls = "";
+            string SneakDice = "";
+
+            check = true;
+
+            Name = trimString(listTextboxName);
+            Attack = checkInt(listTextboxAttack);
+            Damage = checkInt(listTextboxDamage);
+            Rolls = checkInt(listTextboxRolls);
+            Dice = checkInt(listTextboxDice);
+            Type = trimString(listTextboxType);
+            BaseAttack = checkInt(listBaseAttack);
+            BaseRolls = checkInt(listBaseRolls);
+            BaseDice = checkInt(listBaseDice);
+            BaseDamage = checkInt(listBaseDamage);
+            SneakRolls = checkInt(listSneakRolls);
+            SneakDice = checkInt(listSneakDice);
+
+            if (check == true)
+            {
+                ConfigurationManager.AppSettings["Name"] = Name;
+                ConfigurationManager.AppSettings["Attack"] = Attack;
+                ConfigurationManager.AppSettings["Damage"] = Damage;
+                ConfigurationManager.AppSettings["Rolls"] = Rolls;
+                ConfigurationManager.AppSettings["Dice"] = Dice;
+                ConfigurationManager.AppSettings["Type"] = Type;
+                ConfigurationManager.AppSettings["BaseAttack"] = BaseAttack;
+                ConfigurationManager.AppSettings["BaseRolls"] = BaseRolls;
+                ConfigurationManager.AppSettings["BaseDice"] = BaseDice;
+                ConfigurationManager.AppSettings["BaseDamage"] = BaseDamage;
+                ConfigurationManager.AppSettings["SneakRolls"] = SneakRolls;
+                ConfigurationManager.AppSettings["SneakDice"] = SneakDice;
+
+                TextBox1.Text = ConfigurationManager.AppSettings["Name"];
+
+                //Response.Redirect("FormMain.aspx");
             }
+        }
+
+        static string trimString(List<TextBox> lst)
+        {
+            string stringBuilder = "";
+
+            foreach (TextBox textbox in lst)
+            {
+                textbox.Text = textbox.Text.Replace("·", "");
+                textbox.Text = textbox.Text.TrimEnd(' ');
+
+                stringBuilder += textbox.Text + "·";
+            }
+            return stringBuilder.Remove(stringBuilder.Length - 1);
+        }
+
+        static string checkInt (List<TextBox> lst)
+        {
+            int parsedValue;
+            string stringBuilder = "";
+
+            foreach (TextBox textbox in lst)
+            {
+                textbox.Text = textbox.Text.Replace("·", "");
+                textbox.Text = textbox.Text.Replace(" ", "");
+
+                if (int.TryParse(textbox.Text, out parsedValue))
+                {
+                    textbox.BackColor = System.Drawing.Color.White;
+                    stringBuilder += textbox.Text + "·";
+                }
+                else
+                {                    
+                    textbox.BackColor = System.Drawing.Color.Red;
+                    check = false;
+                }
+            }
+            return stringBuilder.TrimEnd('·');
         }
     }
 }

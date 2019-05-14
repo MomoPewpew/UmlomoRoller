@@ -29,7 +29,7 @@ namespace UmlomoRoller
 
         protected void buttonSettings_Click(object sender, EventArgs e)
         {
-            Response.Redirect("~/FormSettings.aspx");
+            Response.Redirect("FormSettings.aspx");
         }
 
         protected void Button1_Click(object sender, EventArgs e)
