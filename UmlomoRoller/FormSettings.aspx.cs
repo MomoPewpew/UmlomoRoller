@@ -26,46 +26,55 @@ namespace UmlomoRoller
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            //if (!IsPostBack)
+            listTextboxName.Clear();
+            listTextboxAttack.Clear();
+            listTextboxDamage.Clear();
+            listTextboxRolls.Clear();
+            listTextboxDice.Clear();
+            listTextboxType.Clear();
+            listBaseAttack.Clear();
+            listBaseRolls.Clear();
+            listBaseDice.Clear();
+            listBaseDamage.Clear();
+            listSneakRolls.Clear();
+            listSneakDice.Clear();
+
+            listBaseAttack.Add(SettingsBaseAttack);
+            listBaseAttack[0].Text = ConfigurationManager.AppSettings["BaseAttack"];
+            listBaseRolls.Add(SettingsBaseRolls);
+            listBaseRolls[0].Text = ConfigurationManager.AppSettings["BaseRolls"];
+            listBaseDice.Add(SettingsBaseDice);
+            listBaseDice[0].Text = ConfigurationManager.AppSettings["BaseDice"];
+            listBaseDamage.Add(SettingsBaseDamage);
+            listBaseDamage[0].Text = ConfigurationManager.AppSettings["BaseDamage"];
+            listSneakRolls.Add(SettingsSneakRolls);
+            listSneakRolls[0].Text = ConfigurationManager.AppSettings["SneakRolls"];
+            listSneakDice.Add(SettingsSneakDice);
+            listSneakDice[0].Text = ConfigurationManager.AppSettings["SneakDice"];
+
+            string[] Name = ConfigurationManager.AppSettings["Name"].Split('·');
+            string[] Attack = ConfigurationManager.AppSettings["Attack"].Split('·');
+            string[] Damage = ConfigurationManager.AppSettings["Damage"].Split('·');
+            string[] Rolls = ConfigurationManager.AppSettings["Rolls"].Split('·');
+            string[] Dice = ConfigurationManager.AppSettings["Dice"].Split('·');
+            string[] Type = ConfigurationManager.AppSettings["Type"].Split('·');
+
+            for (int i = 0; i < 13; i++)
             {
-                listBaseAttack.Add(SettingsBaseAttack);
-                listBaseAttack[0].Text = ConfigurationManager.AppSettings["BaseAttack"];
-                listBaseRolls.Add(SettingsBaseRolls);
-                listBaseRolls[0].Text = ConfigurationManager.AppSettings["BaseRolls"];
-                listBaseDice.Add(SettingsBaseDice);
-                listBaseDice[0].Text = ConfigurationManager.AppSettings["BaseDice"];
-                listBaseDamage.Add(SettingsBaseDamage);
-                listBaseDamage[0].Text = ConfigurationManager.AppSettings["BaseDamage"];
-                listSneakRolls.Add(SettingsSneakRolls);
-                listSneakRolls[0].Text = ConfigurationManager.AppSettings["SneakRolls"];
-                listSneakDice.Add(SettingsSneakDice);
-                listSneakDice[0].Text = ConfigurationManager.AppSettings["SneakDice"];
+                listTextboxName.Add(FindControl("SettingsName" + i) as TextBox);
+                listTextboxAttack.Add(FindControl("SettingsAttack" + i) as TextBox);
+                listTextboxDamage.Add(FindControl("SettingsDamage" + i) as TextBox);
+                listTextboxRolls.Add(FindControl("SettingsRolls" + i) as TextBox);
+                listTextboxDice.Add(FindControl("SettingsDice" + i) as TextBox);
+                listTextboxType.Add(FindControl("SettingsType" + i) as TextBox);                    
 
-                string[] Name = ConfigurationManager.AppSettings["Name"].Split('·');
-                string[] Attack = ConfigurationManager.AppSettings["Attack"].Split('·');
-                string[] Damage = ConfigurationManager.AppSettings["Damage"].Split('·');
-                string[] Rolls = ConfigurationManager.AppSettings["Rolls"].Split('·');
-                string[] Dice = ConfigurationManager.AppSettings["Dice"].Split('·');
-                string[] Type = ConfigurationManager.AppSettings["Type"].Split('·');
-
-                for (int i = 0; i < 13; i++)
+                if (!IsPostBack)
                 {
-                    listTextboxName.Add(FindControl("SettingsName" + i) as TextBox);
                     listTextboxName[i].Text = Name[i];
-
-                    listTextboxAttack.Add(FindControl("SettingsAttack" + i) as TextBox);
                     listTextboxAttack[i].Text = Attack[i];
-
-                    listTextboxDamage.Add(FindControl("SettingsDamage" + i) as TextBox);
                     listTextboxDamage[i].Text = Damage[i];
-
-                    listTextboxRolls.Add(FindControl("SettingsRolls" + i) as TextBox);
                     listTextboxRolls[i].Text = Rolls[i];
-
-                    listTextboxDice.Add(FindControl("SettingsDice" + i) as TextBox);
                     listTextboxDice[i].Text = Dice[i];
-
-                    listTextboxType.Add(FindControl("SettingsType" + i) as TextBox);
                     listTextboxType[i].Text = Type[i];
                 }
             }            
@@ -116,9 +125,7 @@ namespace UmlomoRoller
                 ConfigurationManager.AppSettings["SneakRolls"] = SneakRolls;
                 ConfigurationManager.AppSettings["SneakDice"] = SneakDice;
 
-                TextBox1.Text = ConfigurationManager.AppSettings["Name"];
-
-                //Response.Redirect("FormMain.aspx");
+                Response.Redirect("FormMain.aspx");
             }
         }
 

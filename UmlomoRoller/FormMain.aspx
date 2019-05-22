@@ -95,7 +95,7 @@
                         <br />
             <asp:Label ID="labelModifierMain" runat="server" Font-Size="XX-Large" Height="40px" style="margin: 10px 0px 10px 10px" Text="Situational modifier:" Width="340px"></asp:Label>
                         <br />
-                        <asp:TextBox ID="textModifier" runat="server" Height="50px" Width="330px" style="text-align:center; margin-left: 10px; margin-top: 10px; margin-bottom: 10px" Font-Size="XX-Large" OnTextChanged="TextModifier_TextChanged" ></asp:TextBox>
+                        <asp:TextBox ID="textModifier" runat="server" Height="50px" Width="330px" style="text-align:center; margin-left: 10px; margin-top: 10px; margin-bottom: 10px" Font-Size="XX-Large" OnTextChanged="textModifier_TextChanged" AutoPostBack="True" ></asp:TextBox>
                         <br />
             <asp:Button ID="buttonSettings" runat="server" Height="50px" OnClick="buttonSettings_Click" style="margin: 10px" Text="Settings" Width="340px" />
                     </td>
